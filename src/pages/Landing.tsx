@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import MainNav from "@/components/navigation/MainNav";
 
+/**
+ * A functional component representing the landing page of an application.
+ */
 const Landing = () => {
   return (
     <div className="min-h-screen bg-background">
