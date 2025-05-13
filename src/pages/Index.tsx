@@ -76,6 +76,16 @@ const MAX_CHARACTERS = 280;
 const LOCAL_STORAGE_KEY = "x_post_roast_api_key";
 const SESSION_STORAGE_KEY = "x_post_roast_draft";
 
+/**
+ * Main component for the X Post Analysis and Rewrite application.
+ *
+ * This component handles rendering of various sections such as header, post editor,
+ * analysis results, and navigation. It manages state for user inputs like post content,
+ * selected model, API key, and industry. The component also provides functionality
+ * to rewrite posts using AI models, analyze their viral potential, and display the results.
+ *
+ * @component
+ */
 const Index = () => {
   // State management
   const [post, setPost] = useState(() => {
@@ -239,6 +249,9 @@ const Index = () => {
     </>
   );
 
+  /**
+   * Renders a post editor component with various input fields and actions.
+   */
   const renderPostEditor = () => (
     <>
       {/* Primary Goal */}
