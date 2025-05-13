@@ -2,12 +2,18 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useAuth, UserButton } from "@clerk/clerk-react";
+/**
+ * Main navigation component that displays navigation items based on user authentication status and handles scroll effects.
+ */
 export default function MainNav() {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
 
   // Handle scroll effects
   useEffect(() => {
+    /**
+     * Updates scroll state based on window scroll position.
+     */
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
       if (isScrolled !== scrolled) {
@@ -36,6 +42,9 @@ export default function MainNav() {
       ];
 
   // Check if a path is active
+  /**
+   * Checks if the given path is active based on the current pathname.
+   */
   const isActive = (path) => {
     if (path === "/") return location.pathname === "/";
     return location.pathname.startsWith(path);
