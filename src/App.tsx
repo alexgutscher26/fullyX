@@ -13,6 +13,9 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 // Protected route wrapper
+/**
+ * Renders protected routes, redirecting to sign-in if not authenticated.
+ */
 const ProtectedRoute = ({ children }) => {
   const { isSignedIn, isLoaded } = useAuth();
 
@@ -22,6 +25,9 @@ const ProtectedRoute = ({ children }) => {
   return children;
 };
 
+/**
+ * The main application component that provides routing and context providers.
+ */
 const App = () => (
   <ClerkProviderWithTheme>
     <QueryClientProvider client={queryClient}>
