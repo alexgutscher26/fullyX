@@ -45,6 +45,8 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { ModelSelector } from "@/components/ModelSelector";
 import { CharacterCountdown } from "@/components/CharacterCountdown";
 import { EmojiToggle } from "@/components/EmojiToggle";
+import MainNav from "@/components/navigation/MainNav";
+
 
 // Constants for dropdown options
 const GOALS = [
@@ -409,31 +411,6 @@ const Index = () => {
           Limit rewrite to 280 characters (for non-X Premium)
         </span>
       </div>
-
-      {/* Free Feature Callout */}
-      <div className="w-full mt-8 p-4 bg-green-900/20 border border-green-700/30 rounded-md">
-        <h3 className="text-green-500 font-medium mb-2 flex items-center">
-          <Sparkles size={16} className="mr-2" />
-          Free Features Available
-        </h3>
-        <p className="text-gray-300 text-sm mb-2">
-          Try these free analysis tools after submitting your post:
-        </p>
-        <ul className="text-sm text-gray-400 space-y-1">
-          <li className="flex items-center gap-2">
-            <span className="text-green-500">•</span>
-            Engagement Rate Calculator
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-green-500">•</span>
-            Post Sentiment Analysis
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-green-500">•</span>
-            Hashtag Analyzer
-          </li>
-        </ul>
-      </div>
     </>
   );
 
@@ -462,7 +439,8 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen grid-bg flex flex-col items-center py-10 px-4">
+    <div className="min-h-screen grid-bg flex flex-col items-center pt-20 px-4">
+      <MainNav />
       <div className="w-full max-w-3xl flex flex-col items-center">
         {renderHeader()}
 
