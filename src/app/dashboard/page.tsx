@@ -1,12 +1,7 @@
 import { Suspense } from 'react';
 
 /**
- * Dashboard Page Component
- * 
- * Main dashboard interface for the application.
- * Displays user's social media analytics and optimization tools.
- * 
- * @returns {JSX.Element} Rendered Dashboard component
+ * Renders a dashboard page with a loading fallback.
  */
 export default function DashboardPage() {
   return (
