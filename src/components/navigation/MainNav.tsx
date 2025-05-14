@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useAuth, UserButton } from "@clerk/clerk-react";
+/**
+ * Main navigation component with scroll effects and user authentication checks.
+ */
 export default function MainNav() {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
@@ -36,6 +39,9 @@ export default function MainNav() {
       ];
 
   // Check if a path is active
+  /**
+   * Checks if the given path is active based on the current location pathname.
+   */
   const isActive = (path: string) => {
     if (path === "/") return location.pathname === "/";
     return location.pathname.startsWith(path);

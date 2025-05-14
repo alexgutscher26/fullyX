@@ -4,7 +4,7 @@ import MainNav from "@/components/navigation/MainNav";
 import "@/styles/animations.css";
 
 /**
- * Background decorative elements for the landing page
+ * Renders background elements with grid overlay and animated circle.
  */
 const BackgroundElements = () => (
   <>
@@ -16,7 +16,7 @@ const BackgroundElements = () => (
 );
 
 /**
- * Hero section with title, description and CTA button
+ * Renders a hero section with a title, description, and call-to-action button.
  */
 const HeroSection = () => (
   <div className="max-w-3xl mx-auto text-center space-y-8">
@@ -34,7 +34,7 @@ const HeroSection = () => (
 );
 
 /**
- * Call to action button section
+ * Renders a call-to-action button that links to the dashboard.
  */
 const CallToAction = () => (
   <div className="flex justify-center gap-4 pt-4 animate-fade-in [animation-delay:200ms]">
@@ -56,12 +56,7 @@ const CallToAction = () => (
 );
 
 /**
- * Landing Page Component
- * 
- * Renders the main landing page with hero section and CTA button.
- * Uses animation effects and gradient styling for visual appeal.
- * 
- * @returns {JSX.Element} Rendered Landing component
+ * Renders the main page component with a background gradient, header, and hero section.
  */
 export default function Page() {
   return (

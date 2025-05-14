@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description: 'AI-powered social media optimization and growth platform',
 };
 
+/**
+ * The RootLayout component renders the main HTML structure and theme provider for the application.
+ */
 export default function RootLayout({
   children,
 }: {
