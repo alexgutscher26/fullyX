@@ -36,7 +36,7 @@ export default function MainNav() {
       ];
 
   // Check if a path is active
-  const isActive = (path) => {
+  const isActive = (path: string) => {
     if (path === "/") return location.pathname === "/";
     return location.pathname.startsWith(path);
   };
